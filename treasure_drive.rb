@@ -18,12 +18,12 @@ module TreasureDrive
 
   def urls
     @urls ||= {
-      'lft' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/LFT_2013.xls',
-      'ltn' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/LTN_2013.xls',
-      'ntn-c' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/NTN-C_2013.xls',
-      'ntn-b' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/NTN-B_2013.xls',
-      'ntn-b_principal' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/NTN-B_Principal_2013.xls',
-      'ntf' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/NTN-F_2013.xls'
+      'tesouro/lft' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/LFT_2013.xls',
+      'tesouro/ltn' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/LTN_2013.xls',
+      'tesouro/ntn-c' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/NTN-C_2013.xls',
+      'tesouro/ntn-b' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/NTN-B_2013.xls',
+      'tesouro/ntn-b_principal' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/NTN-B_Principal_2013.xls',
+      'tesouro/ntf' => 'https://www.tesouro.fazenda.gov.br/images/arquivos/artigos/NTN-F_2013.xls'
     }
   end
 
