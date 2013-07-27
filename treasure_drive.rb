@@ -1,11 +1,10 @@
 module TreasureDrive
   def get_files
-    session = google_drive_session
     urls.each_pair do |title, url|
       content = donwload_ssl_verify_none(url)
-      file = session.file_by_title(title)
+      file = google_drive_session.file_by_title(title)
       file.delete(true) if file
-      session.upload_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
+      google_drive_session.upload_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
     end
   end
 
