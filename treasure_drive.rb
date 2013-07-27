@@ -1,4 +1,4 @@
-module CopyToGoogleDrive
+module TreasureDrive
   def get_files
     session = google_drive_session
     urls.each_pair do |name, url|
