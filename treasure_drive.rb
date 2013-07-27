@@ -3,10 +3,11 @@ module TreasureDrive
     session = google_drive_session
     urls.each_pair do |title, url|
       content = donwload_ssl_verify_none(url)
-      if session.file_by_title(title)
+      file = session.file_by_title(title)
+      if file
         session.upload_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
       else
-        session.update_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
+        file.update_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
       end
     end
   end
