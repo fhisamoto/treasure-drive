@@ -4,11 +4,8 @@ module TreasureDrive
     urls.each_pair do |title, url|
       content = donwload_ssl_verify_none(url)
       file = session.file_by_title(title)
-      if file
-        file.update_from_string(content, :content_type =>  "application/vnd.ms-excel")
-      else
-        session.upload_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
-      end
+      file.delete(true) if file
+      session.upload_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
     end
   end
 
