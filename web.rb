@@ -1,4 +1,4 @@
-class TreasureDrive < Sinatra::Application
+class Web < Sinatra::Application
   register Sinatra::Async
 
   get '/' do

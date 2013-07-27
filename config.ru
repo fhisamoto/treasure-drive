@@ -1,6 +1,6 @@
 require 'bundler'
 Bundler.require if defined?(Bundler)
 
-require './treasure_drive'
+require './web'
 
-TreasureDrive.run!
+Web.run!
