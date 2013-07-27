@@ -5,9 +5,9 @@ module TreasureDrive
       content = donwload_ssl_verify_none(url)
       file = session.file_by_title(title)
       if file
-        session.upload_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
+        file.update_from_string(content, :content_type =>  "application/vnd.ms-excel")
       else
-        file.update_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
+        session.upload_from_string(content, title, :content_type =>  "application/vnd.ms-excel")
       end
     end
   end
